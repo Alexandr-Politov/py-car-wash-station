@@ -21,8 +21,8 @@ class CarWashStation:
     ) -> None:
 
         self.distance_from_city_center = (
-            distance_from_city_center 
-            if 1.0 <= distance_from_city_center <= 10.0 
+            distance_from_city_center
+            if 1.0 <= distance_from_city_center <= 10.0
             else 1.0
         )
         self.clean_power = clean_power
@@ -48,7 +48,7 @@ class CarWashStation:
         old_rating = self.average_rating * self.count_of_ratings
         self.count_of_ratings += 1
         self.average_rating = round(
-            (old_rating + rating) 
+            (old_rating + rating)
             / self.count_of_ratings, 1
         )
         return self.average_rating
